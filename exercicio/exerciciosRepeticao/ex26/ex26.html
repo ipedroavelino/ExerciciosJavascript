@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 26</title>
+
+    <style>
+        #botao{
+            width: 60px;
+            height: 40px;
+            background-color: green;
+            color: white;
+            padding: 0;
+            margin: 0;
+        }
+        input{
+            margin: 5px;
+        }
+    </style>
+</head> 
+<body>
+
+     <h1>Tabuada</h1>
+    <p>Escolha um numero que exibirei a tabuada do mesmo</p>
+    <br>
+    <form action="#" method="get">
+        
+        <label>Valor final:</label>
+        <input type="number" placeholder="Início da Contagem" id="dado1"></input>
+
+        <p><button id="botao" type="submit" onclick="clicar()">Contar </button></p>
+    </form>
+    
+    <p id="resultado">Preencha os dados acima e aperte o botão</p>
+
+
+
+
+    <script>
+
+        
+        var res = window.document.getElementById('resultado')
+        var botao1 = window.document.querySelector('button#botao')
+        
+        function clicar(){
+            var dadoUser = Number(window.document.getElementById('dado1').value)
+
+            res.innerHTML+=`<h2>Tabuada do ${dadoUser}</h2>`
+            
+            var numeroTa = dadoUser
+            var numero = 1
+
+            while(numero <= 10){
+                res.innerHTML+=(`${numero} x ${numeroTa} = ${numero * numeroTa}<br>`)
+                numero++
+            }
+            
+        }
+    </script>
+</body>
+</html>

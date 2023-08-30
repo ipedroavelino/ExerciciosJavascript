@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 25</title>
+
+    <style>
+        #botao{
+            width: 60px;
+            height: 40px;
+            background-color: green;
+            color: white;
+            padding: 0;
+            margin: 0;
+        }
+        input{
+            margin: 5px;
+        }
+    </style>
+</head> 
+<body>
+
+     <h1>Contando de 0 até um número positivo qualquer</h1>
+    <p>Escolha o limite final para a contagem a partir do 0 (digite apenas números postivos)</p>
+    <br>
+    <form action="#" method="get">
+        
+        <label>Valor final:</label>
+        <input type="number" placeholder="Início da Contagem" id="dado1"></input>
+        <br>
+        <label>Valor final:</label>
+        <input type="number" placeholder="Fim da Contagem" id="dado2"></input>
+        <p><button id="botao" onclick="clicar()">Contar </button></p>
+    </form>
+    
+    <p id="resultado">Preencha os dados acima e aperte o botão</p>
+
+
+
+
+    <script>
+
+        
+        
+        function clicar(){
+            var res = window.document.getElementById('resultado')
+            var botao1 = window.document.querySelector('button#botao')
+            var dadoUser1 = Number(window.document.getElementById('dado1').value)
+            var dadoUser2 = Number(window.document.getElementById('dado2').value)
+
+            res.innerHTML+=`<h2>Contando de ${dadoUser1} até ${dadoUser2}</h2>`
+            
+            var numero = dadoUser1 
+
+            while(numero <= dadoUser2){
+                res.innerHTML += `${numero},`
+                console.log(numero)
+                numero++;
+            }
+            
+        }
+    </script>
+</body>
+</html>

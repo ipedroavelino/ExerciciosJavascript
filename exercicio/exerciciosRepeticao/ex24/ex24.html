@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 24</title>
+
+    <style>
+        #botao{
+            width: 60px;
+            height: 40px;
+            background-color: green;
+            color: white;
+            padding: 0;
+            margin: 0;
+            
+        }
+    </style>
+</head> 
+<body>
+
+     <h1>Contando de 0 até um número positivo qualquer</h1>
+    <p>Escolha o limite final para a contagem a partir do 0 (digite apenas números postivos)</p>
+    <br>
+    <form action="#" method="get">
+        
+        <label>Valor final:</label>
+        <input type="number" placeholder="Apenas Positivos" id="dado"></input>
+        <button id="botao" onclick="clicar()">Contar </button>
+    </form>
+    
+    <p id="resultado">Preencha os dados acima e aperte o botão</p>
+
+
+
+
+    <script>
+
+        
+        
+        function clicar(){
+            var res = window.document.getElementById('resultado')
+            var botao1 = window.document.querySelector('button#botao')
+            var dadoUser = Number(window.document.getElementById('dado').value)
+            res.innerHTML+=`<h2>Contando de 0 até ${dadoUser}</h2>`
+            var numero0 = 0
+            
+            while(numero0 <= dadoUser){
+                res.innerHTML += `${numero0},`
+                console.log(numero0)
+                numero0++;
+            }
+            
+        }
+    </script>
+</body>
+</html>

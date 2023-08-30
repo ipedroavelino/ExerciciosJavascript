@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 05</title>
+
+    <style>
+        #botao{
+            width: 60px;
+            height: 60px;
+        }
+    </style>
+</head> 
+<body>
+
+     <h1>Trabalhando com números</h1>
+    <button id="botao" onclick="clicar()" type="button">Clique para calcular</button>
+    <p id="resultado">O resultado vem aqui</p>
+
+    <script>
+
+        window.alert('Seja Bem vindo ao meu site')
+        var botao1 = window.document.querySelector('button#botao')
+
+        function clicar(){
+            var numero = window.prompt('Digite um número')
+
+            var res = window.document.getElementById('resultado')
+            res.innerHTML = `O dobro do número ${numero} é ${numero * 2} e a metade é ${numero/2}`
+        }
+    </script>
+</body>
+</html>

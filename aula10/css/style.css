@@ -1,0 +1,19 @@
+div#area{
+    background: green;
+    color: white;
+    width: 200px;
+    height: 200px;
+    line-height: 200px;
+    text-align: center;
+}
+
+
+body{
+    font: normal 18pt arial;
+
+}
+
+input{
+    font: normal 18pt arial;
+    width: 100px;
+}
